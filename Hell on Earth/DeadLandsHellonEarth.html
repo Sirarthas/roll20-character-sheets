@@ -1,0 +1,1865 @@
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Front" checked="checked" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Back" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3" title="Cyborg" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4" title="Vehicle" />
+
+<div class="sheet-tab-content sheet-tab1">
+    <h1></h1>
+    <hr/>
+    <div class="sheet-3colrow">
+
+        <div class="sheet-col">
+
+            <label>Name:</label><input type="text" name="attr_character_name" />
+            <label>Occupation:</label><input type="text" name="attr_occupation" />
+            <label>Bounty Points:</label>
+                <table>
+                    <tr>
+                        <td><input type="number" name="attr_bounty" /></td>
+                    </tr>
+                </table>
+            <label>Chips 'n' Grit:</label>
+                <table>
+                     <tr>
+                        <td><b>White</b></td>
+                        <td><input type="number" name="attr_white"  value="0"/></td>
+                        <td><b>Red</b></td>
+                        <td><input type="number" name="attr_red"  value="0"/></td>
+                        <td><b>Blue</b></td>
+                        <td><input type="number" name="attr_blue"  value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>Green</b></td>
+                        <td><input type="number" name="attr_green"  value="0"/></td>
+                        <td><b>Black</b></td>
+                        <td><input type="number" name="attr_black"  value="0"/></td>
+                        <td><b>Grit</b></td>
+                        <td><input type="number" name="attr_grit"  value="0"/></td>
+                    </tr>
+                </table>
+            <label>Size ‘n’ Pace:</label>
+                <table>
+                    <tr>
+                        <td><b>Size</b></td>
+                        <td><input type="number" name="attr_Size"  value="6"/></td>
+                        <td><b>Pace</b></td>
+                        <td><input type="number" name="attr_grit"  value="0"/></td>
+                    </tr>
+                </table>
+            <label>Wind ‘n’ Strain:</label>
+                <table>
+                    <tr>
+                        <td><b>Wind</b></td>
+                        <td><input type="number" name="attr_Wind"  value="0"/></td>
+                        <td><b>Mex</b></td>
+                        <td><input type="number" name="attr_Windmax"  value="[[@{Spirittrait}+@{Spiritbonus}+@{Vigortrait}+@{Vigorbonus}]]"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>Strain</b></td>
+                        <td><input type="number" name="attr_Strain"  value="0"/></td>
+                        <td><b>Max</b></td>
+                        <td><input type="number" name="attr_Strainmax"  value="[[@{Vigortrait}+@{Vigorbonus}]]"/></td>
+                    </tr>
+                </table>
+        <button type="roll" class="sheet-" name="attr_Actionroll" value="&{template:default} {{name= @{character_name} Actions}} {{Cards= [[{[[floor((@{Quicknesscoord}d@{Quicknesstrait}!!kh1+@{Quicknessbonus}+[[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])/5)+1]],5}kL1]]}}">Actions</button>
+	   </div>
+
+	    <div class="sheet-col">
+		    <p style="text-align: center;">
+			    <img src="http://cdn.obsidianportal.com/assets/155937/longhardroad1c.jpg" style="max-height: 300px;" />
+		    </p>
+            <hr/>
+            <label>Harrowed:</label>
+            Yes<input type="radio" name="attr_Harrowed" value="2"/>No<input type="radio" name="attr_Harrowed" value="0"/>
+            <label>Wounds:</label>
+            <b>Head</b>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="attr_Head_wound_penalty" value="0"/></td>
+                        <td><input type="radio" name="attr_Head_wound_penalty" value="[[-1+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Head_wound_penalty" value="[[-2+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Head_wound_penalty" value="[[-3+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Head_wound_penalty" value="[[-4+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="att_Head_wound_penalty" value="[[-5+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                    </tr>
+                    <tr>
+                        <td>None</td>
+                        <td>Light</td>
+                        <td>Heavy</td>
+                        <td>Serious</td>
+                        <td>Critical</td>
+                        <td>Dead</td>
+                    </tr>
+                </table>
+            <b>Left Arm</b>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="attr_Left-Arm-wound_penalty" value="0"/></td>
+                        <td><input type="radio" name="attr_Left-Arm-wound_penalty" value="[[-1+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Arm-wound_penalty" value="[[-2+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Arm-wound_penalty" value="[[-3+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Arm-wound_penalty" value="[[-4+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Arm-wound_penalty" value="[[-5+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                    <tr>
+                        <td>None</td>
+                        <td>Light</td>
+                        <td>Heavy</td>
+                        <td>Serious</td>
+                        <td>Critical</td>
+                        <td>Maiamed</td>
+                    </tr>
+                </table>
+            <b>Right Arm</b>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="attr_Right-Arm-wound_penalty" value="0"/></td>
+                        <td><input type="radio" name="attr_Right-Arm-wound_penalty" value="[[-1+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Arm-wound_penalty" value="[[-2+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Arm-wound_penalty" value="[[-3+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Arm-wound_penalty" value="[[-4+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Arm-wound_penalty" value="[[-5+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                    </tr>
+                    <tr>
+                        <td>None</td>
+                        <td>Light</td>
+                        <td>Heavy</td>
+                        <td>Serious</td>
+                        <td>Critical</td>
+                        <td>Maiamed</td>
+                    </tr>
+                </table>
+            <b>Guts</b>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="attr_Guts_wound_penalty" value="0"/></td>
+                        <td><input type="radio" name="attr_Guts_wound_penalty" value="[[-1+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Guts_wound_penalty" value="[[-2+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Guts_wound_penalty" value="[[-3+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Guts_wound_penalty" value="[[-4+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="att_Guts_wound_penalty"  value="[[-5+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>                   
+                     </tr>
+                    <tr>
+                        <td>None</td>
+                        <td>Light</td>
+                        <td>Heavy</td>
+                        <td>Serious</td>
+                        <td>Critical</td>
+                        <td>Dead</td>
+                    </tr>
+                </table>
+            <b>Left Leg</b>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="attr_Left-Leg-wound_penalty" value="0"/></td>
+                        <td><input type="radio" name="attr_Left-Leg-wound_penalty" value="[[-1+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Leg-wound_penalty" value="[[-2+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Leg-wound_penalty" value="[[-3+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Leg-wound_penalty" value="[[-4+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Left-Leg-wound_penalty" value="[[-5+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                    </tr>
+                    <tr>
+                        <td>None</td>
+                        <td>Light</td>
+                        <td>Heavy</td>
+                        <td>Serious</td>
+                        <td>Critical</td>
+                        <td>Maiamed</td>
+                    </tr>
+                </table>
+            <b>Right Leg</b>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="attr_Right-Leg-wound_penalty" value="0"/></td>
+                        <td><input type="radio" name="attr_Right-Leg-wound_penalty" value="[[-1+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Leg-wound_penalty" value="[[-2+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Leg-wound_penalty" value="[[-3+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Leg-wound_penalty" value="[[-4+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                        <td><input type="radio" name="attr_Right-Leg-wound_penalty" value="[[-5+@{Thick-Skinned}+@{Thin-Skinned}+@{Harrowed}]]"/></td>
+                    </tr>
+                    <tr>
+                        <td>None</td>
+                        <td>Light</td>
+                        <td>Heavy</td>
+                        <td>Serious</td>
+                        <td>Critical</td>
+                        <td>Maiamed</td>
+                    </tr>
+                </table>
+	    </div>
+
+	    <div class="sheet-col">
+
+		    <h3 style="margin-bottom: 10px;">Edges</h3>
+            <fieldset class="repeating_Edges">
+                <input type="text" name="attr_Edges" />
+                </select>
+                <input type="number" name="attr_Edges-number" />
+            </fieldset>
+        <b>Thick-Skinned</b>Yes<input type="radio" name="attr_Thick-Skinned" value="1"/>No<input type="radio" name="attr_Thick-Skinned" value="0"/>
+		<hr/>
+
+		 <h3 style="margin-bottom: 10px;">Hindrances</h3>
+            <fieldset class="repeating_Hindrances">
+                <input type="text" name="attr_Hindrances" />
+                </select>
+                <input type="number" name="attr_Hindrances-number" />
+            </fieldset>
+        <b>Thin-Skinned</b>Yes<input type="radio" name="attr_Thin-Skinned" value="-1"/>No<input type="radio" name="attr_Thin-Skinned" value="0"/>
+	    </div>
+        
+    </div>
+
+    <hr/>
+
+
+
+    <div class="sheet-2colrow">
+
+        <div class="sheet-col">
+
+            <label>Mental Traits:</label>
+            <table>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_cognitionroll" value="&{template:default} {{name= Cognition }} {{Check= [[@{cognitioncoord}d@{cognitiontrait}!!kh1+@{cognitionbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_cognitiontrait" /><b>+</b><input type="number" name="attr_cognitionbonus" value="0" /></td>
+                   <td><b>Cognition</b></td>
+                   <td><input type="number" name="attr_cognitioncoord" value="0" /></td>
+                </tr>
+                <tr>
+                    <td><button type="roll" class="sheet-" name="attr_Artilleryroll" value="&{template:default} {{name= Artillery }} {{Check= [[@{Artillerycoord}d@{cognitiontrait}!!kh1+@{cognitionbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }} "></button></td>
+                   <td>Artillery</td>
+                   <td><input type="text" name="attr_Artillery" /></td>
+                   <td><input type="number" name="attr_Artillerycoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Artroll" value="&{template:default} {{name= Art }} {{Check= [[@{Artscoord}d@{cognitiontrait}!!kh1+@{cognitionbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Arts</td>
+                   <td><input type="text" name="attr_Arts" /></td>
+                   <td><input type="number" name="attr_Artscoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Scrutinizeroll" value="&{template:default} {{name= Scrutinize }} {{Check= [[@{Scrutinizecoord}d@{cognitiontrait}!!kh1+@{cognitionbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Scrutinize</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Scrutinizecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_searchroll" value="&{template:default} {{name= Search }} {{Check= [[@{searchcoord}d@{cognitiontrait}!!kh1+@{cognitionbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Search</td>
+                   <td></td>
+                   <td><input type="number" name="attr_searchcoord" value="1" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_trackinroll" value="&{template:default} {{name= Trackin }} {{Check= [[@{trackincoord}d@{cognitiontrait}!!kh1+@{cognitionbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Trackin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_trackincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Knowledgeroll" value="&{template:default} {{name= Knowledge }} {{Check= [[@{Knowledgecoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]]}}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Knowledgetrait" /><b>+</b><input type="number" name="attr_Knowledgebonus" value="0" /></td>
+                   <td><b>Knowledge</b></td>
+                   <td><input type="number" name="attr_Knowledgecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Academiaroll" value="&{template:default} {{name= Academia }} {{Check= [[@{Academiacoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Academia</td>
+                   <td><input type="text" name="attr_Academia" /></td>
+                   <td><input type="number" name="attr_Academiacoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Arearoll" value="&{template:default} {{name= Area Knowledge }} {{Check= [[@{Areacoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Area Knowledge</td>
+                   <td><input type="text" name="attr_Area" value="Home County"/></td>
+                   <td><input type="number" name="attr_Areacoord" value="2" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Blastinroll" value="&{template:default} {{name= Blastin }} {{Check= [[@{Blastincoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Blastin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Blastincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Demolitionroll" value="&{template:default} {{name= Demolition }} {{Check= [[@{Demolitioncoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Demolition</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Demolitioncoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Disguiseroll" value="&{template:default} {{name= Disguise }} {{Check= [[@{Disguisecoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Disguise</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Disguisecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Hexslingroll" value="&{template:default} {{name= Hexsling }} {{Check= [[@{Hexslingcoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Hexsling</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Hexslingcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Languageroll" value="&{template:default} {{name= Language }} {{Check= [[@{Languagecoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Language</td>
+                   <td><input type="text" name="attr_Language" value="Native Tongue"/></td>
+                   <td><input type="number" name="attr_Languagecoord" value="2" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Medicineroll" value="&{template:default} {{name= Medicine }} {{Check= [[@{Medicinecoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Medicine</td>
+                   <td><input type="text" name="attr_Medicine" /></td>
+                   <td><input type="number" name="attr_Medicinecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Professionalroll" value="&{template:default} {{name= Professional }} {{Check= [[@{Professionalcoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Professional</td>
+                   <td><input type="text" name="attr_Professional" /></td>
+                   <td><input type="number" name="attr_Professionalcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Scienceroll" value="&{template:default} {{name= Science }} {{Check= [[@{Sciencecoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Science</td>
+                   <td><input type="text" name="attr_Science" /></td>
+                   <td><input type="number" name="attr_Sciencecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td> <button type="roll" class="sheet-" name="attr_Traderoll" value="&{template:default} {{name= Trade }} {{Check= [[@{Tradecoord}d@{Knowledgetrait}!!kh1+@{Knowledgebonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Trade</td>
+                   <td><input type="text" name="attr_Trade" /></td>
+                   <td><input type="number" name="attr_Tradecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Mienroll" value="&{template:default} {{name= Mien }} {{Check= [[@{Miencoord}d@{Mientrait}!!kh1+@{Mienbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Mientrait" /><b>+</b><input type="number" name="attr_Mienbonus" value="0" /></td>
+                   <td><b>Mien</b></td>
+                   <td><input type="number" name="attr_Miencoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Animalroll" value="&{template:default} {{name= Animal Handlin }} {{Check= [[@{Animalcoord}d@{Mientrait}!!kh1+@{Mienbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Animal Handlin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Animalcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Leadershiproll" value="&{template:default} {{name= Leadership }} {{Check= [[@{Leadershipcoord}d@{Mientrait}!!kh1+@{Mienbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Leadership</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Leadershipcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Overaweroll" value="&{template:default} {{name= Overawe }} {{Check= [[@{Overawecoord}d@{Mientrait}!!kh1+@{Mienbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Overawe</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Overawecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Performinroll" value="&{template:default} {{name= Performin }} {{Check= [[@{Performincoord}d@{Mientrait}!!kh1+@{Mienbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Performin</td>
+                   <td><input type="text" name="attr_Performin" /></td>
+                   <td><input type="number" name="attr_Performincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Persuasionroll" value="&{template:default} {{name= Persuasion }} {{Check= [[@{Persuasioncoord}d@{Mientrait}!!kh1+@{Mienbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Persuasion</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Persuasioncoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Taleroll" value="&{template:default} {{name= Tale Tellin }} {{Check= [[@{Talecoord}d@{Mientrait}!!kh1+@{Mienbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Tale Tellin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Talecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Smartsroll" value="&{template:default} {{name= Smarts }} {{Check= [[@{Smartscoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Smartstrait" /><b>+</b><input type="number" name="attr_Smartsbonus" value="0" /></td>
+                   <td><b>Smart</b></td>
+                   <td><input type="number" name="attr_Smartscoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Bluffroll" value="&{template:default} {{name= Bluff }} {{Check= [[@{Bluffcoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Bluff</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Bluffcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Gamblinroll" value="&{template:default} {{name= Gamblin }} {{Check= [[@{Gamblincoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Gamblin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Gamblincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Ridiculeroll" value="&{template:default} {{name= Ridicule }} {{Check= [[@{Ridiculecoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Ridicule</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Ridiculecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Scrounginroll" value="&{template:default} {{name= Scroungin }} {{Check= [[@{Scroungincoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Scroungin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Scroungincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Streetwiseroll" value="&{template:default} {{name= Streetwise }} {{Check= [[@{Streetwisecoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Streetwise</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Streetwisecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Survivalroll" value="&{template:default} {{name= Survival }} {{Check= [[@{Survivalcoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Survival</td>
+                   <td><input type="text" name="attr_Survival" /></td>
+                   <td><input type="number" name="attr_Survivalcoord" value="0" /></td>
+               </tr>
+
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Tinkerinroll" value="&{template:default} {{name= Tinkerin }} {{Check= [[@{Tinkerincoord}d@{Smartstrait}!!kh1+@{Smartsbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Tinkerin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Tinkerincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Spiritroll" value="&{template:default} {{name= Spirit }} {{Check= [[@{Spiritcoord}d@{Spirittrait}!!kh1+@{Spiritbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Spirittrait" /><b>+</b><input type="number" name="attr_Spiritbonus" value="0" /></td>
+                   <td><b>Spirit</b></td>
+                   <td><input type="number" name="attr_Spiritcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Faithroll" value="&{template:default} {{name= Faith }} {{Check= [[@{Faithcoord}d@{Spirittrait}!!kh1+@{Spiritbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Faith</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Faithcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Gutsroll" value="&{template:default} {{name= Guts }} {{Check= [[@{Gutscoord}d@{Spirittrait}!!kh1+@{Spiritbonus}+@{grit}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Guts</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Gutscoord" value="0" /></td>
+               </tr>
+           </table>
+        
+        </div>
+
+        <div class="sheet-col">
+
+            <label>Corporeal Traits:</label>
+            <table>
+                <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Deftnessroll" value="&{template:default} {{name= Deftness }} {{Check= [[@{Deftnesscoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Deftnesstrait" /><b>+</b><input type="number" name="attr_Deftnessbonus" value="0" /></td>
+                   <td><b>Deftness</b></td>
+                   <td><input type="number" name="attr_Deftnesscoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Bowroll" value="&{template:default} {{name= Bow }} {{Check= [[@{Bowcoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Bow</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Bowcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Filchinroll" value="&{template:default} {{name= Filchin }} {{Check= [[@{Filchincoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Filchin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Filchincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Lockpickinroll" value="&{template:default} {{name= Lockpickin}} {{Check= [[@{Lockpickincoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Lockpickin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Lockpickincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Shootinroll" value="&{template:default} {{name= Shootin }} {{Check= [[@{Shootincoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Shootin</td>
+                   <td><input type="text" name="attr_Shootin" /></td>
+                   <td><input type="number" name="attr_Shootincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Sleightroll" value="&{template:default} {{name= Sleight o’ Hand }} {{Check= [[@{Sleightcoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Sleight o’ Hand</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Sleightcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Speedroll" value="&{template:default} {{name= Speed Load }} {{Check= [[@{Speedcoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Speed Load</td>
+                   <td><input type="text" name="attr_Speed" /></td>
+                   <td><input type="number" name="attr_Speedcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Throwinroll" value="&{template:default} {{name= Throwin }} {{Check= [[@{Throwincoord}d@{Deftnesstrait}!!kh1+@{Deftnessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Throwin</td>
+                   <td><input type="text" name="attr_Throwin" /></td>
+                   <td><input type="number" name="attr_Throwincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Nimblenessroll" value="&{template:default} {{name= Nimbleness }} {{Check= [[@{Nimblenesscoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Nimblenesstrait" /><b>+</b><input type="number" name="attr_Nimblenessbonus" value="0" /></td>
+                   <td><b>Nimbleness</b></td>
+                   <td><input type="number" name="attr_Nimblenesscoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Climbinroll" value="&{template:default} {{name= Climbin }} {{Check= [[@{Climbincoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Climbin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Climbincoord" value="1" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Dodgeroll" value="&{template:default} {{name= Dodge }} {{Check= [[@{Dodgecoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Dodge</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Dodgecoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Drivinroll" value="&{template:default} {{name= Drivin }} {{Check= [[@{Drivincoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Drivin</td>
+                   <td><input type="text" name="attr_Drivin" /></td>
+                   <td><input type="number" name="attr_Drivincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Fightinroll" value="&{template:default} {{name= Fightin }} {{Check= [[@{Fightincoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Fightin</td>
+                   <td><input type="text" name="attr_Fightin" /></td>
+                   <td><input type="number" name="attr_Fightincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Ridinroll" value="&{template:default} {{name= Ridin }} {{Check= [[@{Ridincoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Ridin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Ridincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Sneakroll" value="&{template:default} {{name= Sneak }} {{Check= [[@{Sneakcoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Sneak</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Sneakcoord" value="1" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Swimminroll" value="&{template:default} {{name= Swimmin }} {{Check= [[@{Swimmincoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Swimmin</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Swimmincoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Teamsterroll" value="&{template:default} {{name= Teamster }} {{Check= [[@{Teamstercoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Teamster</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Teamstercoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Strengthroll" value="&{template:default} {{name= Strength }} {{Check= [[@{Strengthcoord}d@{Strengthtrait}!!kh1+@{Strengthbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Strengthtrait" /><b>+</b><input type="number" name="attr_Strengthbonus" value="0" /></td>
+                   <td><b>Strength</b></td>
+                   <td><input type="number" name="attr_Strengthcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Quicknessroll" value="&{template:default} {{name= Quickness }} {{Check= [[@{Quicknesscoord}d@{Quicknesstrait}!!kh1+@{Quicknessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Quicknesstrait" /><b>+</b><input type="number" name="attr_Quicknessbonus" value="0" /></td>
+                   <td><b>Quickness</b></td>
+                   <td><input type="number" name="attr_Quicknesscoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Quickroll" value="&{template:default} {{name= Quick Draw}} {{Check= [[@{Quickcoord}d@{Quicknesstrait}!!kh1+@{Quicknessbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td>Quick Draw</td>
+                   <td></td>
+                   <td><input type="number" name="attr_Quickcoord" value="0" /></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Vigorroll" value="&{template:default} {{name= Vigor }} {{Check= [[@{Vigorcoord}d@{Vigortrait}!!kh1+@{Vigorbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])]] }}"></button></td>
+                   <td><b>D</b><input type="number" name="attr_Vigortrait" /><b>+</b><input type="number" name="attr_Vigorbonus" value="0" /></td>
+                   <td><b>Vigor</b></td>
+                   <td><input type="number" name="attr_Vigorcoord" value="0" /></td>
+               </tr>
+           </table>
+        
+        </div>
+
+    </div>
+
+    <hr/>
+
+
+    <div class="sheet">
+        <h3 style="margin-bottom: 10px;">Shootin Irons</h3>
+        <fieldset class="repeating_Shootin">
+           <table>
+               <tr>
+	                <td></td>
+                   <td><b>Weapon</b></td>
+                   <td><b>Shots</b></td>
+                   <td><b>Speed</b></td>
+                   <td><b>RoF</b></td>
+                   <td><b>Range</b></td>
+                   <td><b>Damage</b></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Weaponroll" value="&{template:default} {{name= @{Weapon} Hurt @{target|token_name} for }} {{Check= [[?{Number|@{Damagecoord}}d?{type|@{Damagetrait}}!!+?{Modifier|0}]] }}"></button></td>
+                   <td><input type="text" name="attr_Weapon" /></td>
+                   <td><input type="number" name="attr_Shots" value="1"/></td>
+                   <td><input type="number" name="attr_Speed" value="1"/></td>
+                   <td><input type="number" name="attr_RoF" value="1"/></td>
+                   <td><input type="number" name="attr_Range" value="5"/></td>
+                   <td><input type="number" name="attr_Damagecoord" />D<input type="number" name="attr_Damagetrait" /></td>
+               </tr>
+           </table>
+
+            </select>
+        </fieldset>
+    </div>
+    <div class="sheet">
+        <h3 style="margin-bottom: 10px;">Melee</h3>
+        <fieldset class="repeating_Melee">
+           <table>
+               <tr>
+	                <td></td>
+                   <td><b>Weapon</b></td>
+                   <td><b>Defense</b></td>
+                   <td><b>Speed</b></td>
+                   <td><b>Damage</b></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Melee-Weaponroll" value="&{template:default} {{name= @{Melee-Weapon} Hurt @{target|token_name} for }} {{Check= [[@{Strengthcoord}d@{Strengthtrait}!!kh1+@{Strengthbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])+ (?{Number|@{Melee-Damagecoord}}d?{type|@{Melee-Damagetrait}}!!+?{Modifier|0})]] }}"></button></td>
+                   <td><input type="text" name="attr_Melee-Weapon" /></td>
+                   <td><input type="number" name="attr_Melee-Defense" value="1"/></td>
+                   <td><input type="number" name="attr_Melee-Speed" value="1"/></td>
+                   <td><input type="number" name="attr_Melee-Damagecoord" />D<input type="number" name="attr_Melee-Damagetrait" /></td>
+               </tr>
+           </table>
+
+            </select>
+        </fieldset>
+  
+    </div>
+
+    
+    </div>
+</div>
+
+<div class="sheet-tab-content sheet-tab2">
+    <h1></h1>
+    <hr/>
+    <div class="sheet-2colrow">
+
+        <div class="sheet-col">
+
+        <label>Name:</label><input type="text" name="attr_character_name" />
+        <label>Occupation:</label><input type="text" name="attr_occupation" />
+        </div>
+
+        <div class="sheet-col">
+    	<p style="text-align: center;">
+			<img src="https://i.ytimg.com/vi/vKeBM5LeT20/hqdefault.jpg" style="max-height: 200px;" />
+		</p>
+	    </div>
+
+    </div>
+    <hr/>
+    <div class="sheet">
+        <h3 style="margin-bottom: 10px;">Arcane Abilities</h3>
+        <fieldset class="repeating_Arcane">
+           <table>
+               <tr>
+                    <td></td>
+                    <td><b>Ability</b></td>
+                   <td><b>TN</b></td>
+                   <td><b>Strain</b></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Arcaneroll" value="&{template:default} {{name=@{Ability}}} {{TN=@{TN}}} {{Strain Cost=@{Straincost}}} {{Speed=@{Ability-Speed}}} {{Duration=@{Ability-Duration}}} {{Range=@{Ability-Range}}} {{Notes=@{Ability-Notes}}}"></button></td>
+                   <td><input type="text" name="attr_Ability" /></td>
+                   <td><input type="text" name="attr_TN" /></td>
+                   <td><input type="text" name="attr_Straincost" /></td>
+               </tr>
+               <tr>
+                   <td><b>Speed</b></td>
+                   <td><b>Duration</b></td>
+                   <td><b>Range</b></td>
+                   <td><b>Notes</b></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Ability-Speed" /></td>
+                   <td><input type="text" name="attr_Ability-Duration" /></td></td>
+                   <td><input type="text" name="attr_Ability-Range" /></td>
+                   <td><input type="text" name="attr_Ability-Notes" /></td></td>
+               </tr>
+           </table>
+
+            </select>
+        </fieldset>
+  
+    </div>
+    <hr/>
+    <label>Your Worst Nightmare:</label><textarea name="attr_Nightmare" ></textarea>
+    <hr/>
+    <label>Gear:</label><textarea name="attr_Gear" ></textarea>
+</div>
+
+<div class="sheet-tab-content sheet-tab3">
+    <h1></h1>
+    <hr/>
+    <div class="sheet-3colrow">
+
+        <div class="sheet-col">
+
+        <label>Name:</label><input type="text" name="attr_character_name" />
+        <label>Power Drain:</label>
+          <table>
+               <tr>
+                   <td><b>Current</b></td>
+                   <td><input type="number" name="attr_Current"  value="0"/></td>
+                   <td><b>Max</b></td>
+                    <td><input type="number" name="attr_Max"  value="0"/></td>
+               </tr>
+           </table>
+        <label>Power Capacitor:</label>
+            <table>
+               <tr>
+                   <td><b>One</b></td>
+                   <td><input type="number" name="attr_One"  value="0"/></td>
+                   <td><b>Two</b></td>
+                   <td><input type="number" name="attr_Two"  value="0"/></td>
+                   <td><b>Three</b></td>
+                   <td><input type="number" name="attr_Three"  value="0"/></td>
+               </tr>
+           </table>
+
+	</div>
+
+	<div class="sheet-col">
+		<p style="text-align: center;">
+			<img src="http://vignette2.wikia.nocookie.net/smallville/images/c/ca/Cyborg-injustice.png/revision/latest?cb=20130906055210" style="max-height: 300px;" />
+		</p>
+	</div>
+
+	   <div class="sheet-col">
+
+    	<h3>Rules Of Engagement</h3>
+
+		<textarea name="attr_Rules"></textarea>
+
+	</div>
+
+</div>
+
+<hr/>
+    <div class="sheet-3colrow">
+
+        <div class="sheet-col">
+
+             <table>
+                <tr>
+                   <td></td>
+                   <td><b>Left Arm</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>Internal</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Item</b></td>
+                   <td></td>
+                   <td><b>Drain</b></td>
+               </tr>
+               <tr>
+                   <td><b>1.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-1" /></td>
+                   <td><input type="number" name="attr_Left-Arm-1-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>2.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-2" /></td>
+                   <td><input type="number" name="attr_Left-Arm-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-3" /></td>
+                   <td><input type="number" name="attr_Left-Arm-3-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>4.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-4" /></td>
+                   <td><input type="number" name="attr_Left-Arm-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>5.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-5" /></td>
+                   <td><input type="number" name="attr_Left-Arm-5-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>6.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-6" /></td>
+                   <td><input type="number" name="attr_Left-Arm-6-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>7.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-7" /></td>
+                   <td><input type="number" name="attr_Left-Arm-7-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>8.</b></td>
+                   <td><input type="text" name="attr_Left-Arm-8" /></td>
+                   <td><input type="number" name="attr_Left-Arm-8-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>External</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>1-2</b></td>
+                   <td><input type="text" name="attr_Left-Arm-1-2" /></td>
+                   <td><input type="number" name="attr_Left-Arm-1-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3-4</b></td>
+                   <td><input type="text" name="attr_Left-Arm-3-4" /></td>
+                   <td><input type="number" name="attr_Left-Arm-3-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                </tr>       
+                <tr>
+                   <td></td>
+                   <td><b>Left Leg</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>Internal</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Item</b></td>
+                   <td></td>
+                   <td><b>Drain</b></td>
+               </tr>
+               <tr>
+                   <td><b>1.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-1" /></td>
+                   <td><input type="number" name="attr_Left-Leg-1-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>2.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-2" /></td>
+                   <td><input type="number" name="attr_Left-Leg-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-3" /></td>
+                   <td><input type="number" name="attr_Left-Leg-3-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>4.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-4" /></td>
+                   <td><input type="number" name="attr_Left-Leg-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>5.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-5" /></td>
+                   <td><input type="number" name="attr_Left-Leg-5-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>6.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-6" /></td>
+                   <td><input type="number" name="attr_Left-Leg-6-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>7.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-7" /></td>
+                   <td><input type="number" name="attr_Left-Leg-7-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>8.</b></td>
+                   <td><input type="text" name="attr_Left-Leg-8" /></td>
+                   <td><input type="number" name="attr_Left-Leg-8-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>External</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>1-2</b></td>
+                   <td><input type="text" name="attr_Left-Leg-1-2" /></td>
+                   <td><input type="number" name="attr_Left-Leg-1-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3-4</b></td>
+                   <td><input type="text" name="attr_Left-Leg-3-4" /></td>
+                   <td><input type="number" name="attr_Left-Leg-3-4-drain" /></td>
+               </tr>
+               </tr>
+           </table>
+
+	</div>
+
+	    <div class="sheet-col">
+
+             <table>
+                <tr>
+                   <td></td>
+                   <td><b>Head</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Item</b></td>
+                   <td></td>
+                   <td><b>Drain</b></td>
+               </tr>
+               <tr>
+                   <td><b>1.</b></td>
+                   <td><b>AI</b></td>
+                   <td><input type="number" name="attr_AI-drain" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>2.</b></td>
+                   <td><b>Spirit Fetter</b></td>
+                   <td><input type="number" name="attr_Fetter-drain"  value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>3.</b></td>
+                   <td><input type="text" name="attr_Head-3" /></td>
+                   <td><input type="number" name="attr_Head-3-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>4.</b></td>
+                   <td><input type="text" name="attr_Head-4" /></td>
+                   <td><input type="number" name="attr_Head-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>5.</b></td>
+                   <td><input type="text" name="attr_Head-5" /></td>
+                   <td><input type="number" name="attr_Head-5-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>6.</b></td>
+                   <td><input type="text" name="attr_Head-6" /></td>
+                   <td><input type="number" name="attr_Head-6-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>7.</b></td>
+                   <td><input type="text" name="attr_Head-7" /></td>
+                   <td><input type="number" name="attr_Head-7-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>8.</b></td>
+                   <td><input type="text" name="attr_Head-Arm-8" /></td>
+                   <td><input type="number" name="attr_Head-8-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>Torso</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>Internal</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Item</b></td>
+                   <td></td>
+                   <td><b>Drain</b></td>
+               </tr>
+               <tr>
+                   <td><b>1.</b></td>
+                   <td><input type="text" name="attr_Torso-1" /></td>
+                   <td><input type="number" name="attr_Torso-1-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>2.</b></td>
+                   <td><input type="text" name="attr_Torso-2" /></td>
+                   <td><input type="number" name="attr_Torso-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3.</b></td>
+                   <td><input type="text" name="attr_Torso-3" /></td>
+                   <td><input type="number" name="attr_Torso-3-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>4.</b></td>
+                   <td><input type="text" name="attr_Torso-4" /></td>
+                   <td><input type="number" name="attr_Torso-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>5.</b></td>
+                   <td><input type="text" name="attr_Torso-5" /></td>
+                   <td><input type="number" name="attr_Torso-5-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>6.</b></td>
+                   <td><input type="text" name="attr_Torso-6" /></td>
+                   <td><input type="number" name="attr_Torso-6-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>7.</b></td>
+                   <td><input type="text" name="attr_Torso-7" /></td>
+                   <td><input type="number" name="attr_Torso-7-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>8.</b></td>
+                   <td><input type="text" name="attr_Torso-8" /></td>
+                   <td><input type="number" name="attr_Torso-8-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>9.</b></td>
+                   <td><input type="text" name="attr_Torso-9" /></td>
+                   <td><input type="number" name="attr_Torso-9-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>10.</b></td>
+                   <td><input type="text" name="attr_Torso-0" /></td>
+                   <td><input type="number" name="attr_Torso-0-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>External</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>1.</b></td>
+                   <td><input type="text" name="attr_Torso-External-1" /></td>
+                   <td><input type="number" name="attr_Torso-External-1-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>2.</b></td>
+                   <td><input type="text" name="attr_Torso-External-2" /></td>
+                   <td><input type="number" name="attr_Torso-External-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3.</b></td>
+                   <td><input type="text" name="attr_Torso-External-3" /></td>
+                   <td><input type="number" name="attr_Torso-External-3-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>4.</b></td>
+                   <td><input type="text" name="attr_Torso-External-4" /></td>
+                   <td><input type="number" name="attr_Torso-External-4-drain" /></td>
+               </tr>
+           </table>
+	</div>
+
+	    <div class="sheet-col">
+
+             <table>
+                <tr>
+                   <td></td>
+                   <td><b>Right Arm</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>Internal</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Item</b></td>
+                   <td></td>
+                   <td><b>Drain</b></td>
+               </tr>
+               <tr>
+                   <td><b>1.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-1" /></td>
+                   <td><input type="number" name="attr_Right-Arm-1-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>2.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-2" /></td>
+                   <td><input type="number" name="attr_Right-Arm-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-3" /></td>
+                   <td><input type="number" name="attr_Right-Arm-3-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>4.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-4" /></td>
+                   <td><input type="number" name="attr_Right-Arm-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>5.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-5" /></td>
+                   <td><input type="number" name="attr_Right-Arm-5-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>6.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-6" /></td>
+                   <td><input type="number" name="attr_Right-Arm-6-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>7.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-7" /></td>
+                   <td><input type="number" name="attr_Right-Arm-7-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>8.</b></td>
+                   <td><input type="text" name="attr_Right-Arm-8" /></td>
+                   <td><input type="number" name="attr_Right-Arm-8-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>External</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>1-2</b></td>
+                   <td><input type="text" name="attr_Right-Arm-1-2" /></td>
+                   <td><input type="number" name="attr_Right-Arm-1-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3-4</b></td>
+                   <td><input type="text" name="attr_Right-Arm-3-4" /></td>
+                   <td><input type="number" name="attr_Left-Arm-3-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                </tr>       
+                <tr>
+                   <td></td>
+                   <td><b>Right Leg</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>Internal</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Item</b></td>
+                   <td></td>
+                   <td><b>Drain</b></td>
+               </tr>
+               <tr>
+                   <td><b>1.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-1" /></td>
+                   <td><input type="number" name="attr_Right-Leg-1-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>2.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-2" /></td>
+                   <td><input type="number" name="attr_Right-Leg-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-3" /></td>
+                   <td><input type="number" name="attr_Right-Leg-3-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>4.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-4" /></td>
+                   <td><input type="number" name="attr_Right-Leg-4-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>5.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-5" /></td>
+                   <td><input type="number" name="attr_Right-Leg-5-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>6.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-6" /></td>
+                   <td><input type="number" name="attr_Right-Leg-6-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>7.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-7" /></td>
+                   <td><input type="number" name="attr_Right-Leg-7-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>8.</b></td>
+                   <td><input type="text" name="attr_Right-Leg-8" /></td>
+                   <td><input type="number" name="attr_Right-Leg-8-drain" /></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>External</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>1-2</b></td>
+                   <td><input type="text" name="attr_Right-Leg-1-2" /></td>
+                   <td><input type="number" name="attr_Right-Leg-1-2-drain" /></td>
+               </tr>
+               <tr>
+                   <td><b>3-4</b></td>
+                   <td><input type="text" name="attr_Right-Leg-3-4" /></td>
+                   <td><input type="number" name="attr_Right-Leg-3-4-drain" /></td>
+               </tr>
+               </tr>
+           </table>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="sheet-tab-content sheet-tab4">
+    <h1></h1>
+    <hr/>
+    <div class="sheet-3colrow">
+
+        <div class="sheet-col">
+
+            <label>Vehicle:</label><input type="text" name="attr_Vehicle" />
+            <label>Owner:</label><input type="text" name="attr_character_name" />
+            <label>Type:</label><input type="text" name="attr_Type_name" />
+                <table>
+                     <tr>
+                        <td><b>Acceleration Rating</b></td>
+                        <td><input type="number" name="attr_Acceleration"  value="0"/></td>
+                        <td><b>Handling</b></td>
+                        <td><input type="number" name="attr_Handling"  value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>Top Speed</b></td>
+                        <td><input type="number" name="attr_Top"  value="0"/></td>
+                        <td><b>MPG</b></td>
+                        <td><input type="number" name="attr_MPG"  value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Gas Guage</b></td>
+                        <td><input type="number" name="attr_Gas"  value="0"/></td>
+                    </tr>
+                </table>
+            <label>Durabulity:</label>
+                <table>
+                    <tr>
+                        <td><b>Durabulity Step</b></td>
+                        <td><input type="number" name="attr_Durabulity"  value="0"/></td>
+                    </tr>
+                    <tr>
+                        <td><b>Current</b></td>
+                        <td><input type="number" name="attr_Current-Durabulity"  value="0"/></td>
+                        <td><b>Max</b></td>
+                        <td><input type="number" name="attr_max-Durabulity"  value="0"/></td>
+                    </tr>
+                </table>
+        <button type="roll" class="sheet-" name="attr_Drivin_this_velroll" value="&{template:default} {{name= Drivin @{Vehicle} }} {{Check= [[@{Drivincoord}d@{Nimblenesstrait}!!kh1+@{Nimblenessbonus}+[[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]]+@{Durabulity}+@{Handling}+@{Speedometer}]] }}">Driving Roll</button>
+	   </div>
+
+	    <div class="sheet-col">
+		    <p style="text-align: center;">
+			    <img src="http://blog.caranddriver.com/wp-content/uploads/2015/04/MMFR_BigFoot-876x534.jpg" style="max-height: 300px;" />
+		    </p>
+	    </div>
+
+	    <div class="sheet-col">
+
+		        <table>
+                    <tr>
+                        <td><b>Size:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Size" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Durability:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Durability" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Passengers:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Passengers" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Load Limit:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Load-Limit" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Total Load:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Total-Load" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Gas Tank:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Gas-Tank" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Cost:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Cost" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Make:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Make" /></td>
+                    </tr><tr>
+                        <td><b>Model:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Model" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Year:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Year" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Color:</b></td>
+                        <td><input type="text" name="attr_Vehicle-Color" /></td>
+                    </tr>
+                </table>
+	    </div>
+
+    </div>
+
+<hr/>
+    <div class="sheet-3colrow">
+
+        <div class="sheet-col">
+            <label>Speedometer:</label>
+                <table>
+                    <tr>
+                        <td><b>Set</b></td>
+                        <td><b></b></td>
+                        <td><b>MPH</b></td>
+                        <td><b>|</b></td>
+                        <td><b>MPR</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="0"/></td>
+                        <td><b></b></td>
+                        <td><b>0</b></td>
+                        <td><b></b></td>
+                        <td><b>0</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="0"/></td>
+                        <td><b></b></td>
+                        <td><b>5.</b></td>
+                        <td><b></b></td>
+                        <td><b>0.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="0"/></td>
+                        <td><b></b></td>
+                        <td><b>10</b></td>
+                        <td><b></b></td>
+                        <td><b>1</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="0"/></td>
+                        <td><b></b></td>
+                        <td><b>15</b></td>
+                        <td><b></b></td>
+                        <td><b>1.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="0"/></td>
+                        <td><b></b></td>
+                        <td><b>20</b></td>
+                        <td><b></b></td>
+                        <td><b>2</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="0"/></td>
+                        <td><b></b></td>
+                        <td><b>25</b></td>
+                        <td><b></b></td>
+                        <td><b>2.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-1"/></td>
+                        <td><b></b></td>
+                        <td><b>30</b></td>
+                        <td><b></b></td>
+                        <td><b>3</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-1"/></td>
+                        <td><b></b></td>
+                        <td><b>35</b></td>
+                        <td><b></b></td>
+                        <td><b>3.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-1"/></td>
+                        <td><b></b></td>
+                        <td><b>40</b></td>
+                        <td><b></b></td>
+                        <td><b>4</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-1"/></td>
+                        <td><b></b></td>
+                        <td><b>45</b></td>
+                        <td><b></b></td>
+                        <td><b>4.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-1"/></td>
+                        <td><b></b></td>
+                        <td><b>50</b></td>
+                        <td><b></b></td>
+                        <td><b>5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-2"/></td>
+                        <td><b></b></td>
+                        <td><b>55</b></td>
+                        <td><b></b></td>
+                        <td><b>5.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-2"/></td>
+                        <td><b></b></td>
+                        <td><b>60</b></td>
+                        <td><b></b></td>
+                        <td><b>6</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-2"/></td>
+                        <td><b></b></td>
+                        <td><b>65</b></td>
+                        <td><b></b></td>
+                        <td><b>6.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-2"/></td>
+                        <td><b></b></td>
+                        <td><b>70</b></td>
+                        <td><b></b></td>
+                        <td><b>7</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-2"/></td>
+                        <td><b></b></td>
+                        <td><b>75</b></td>
+                        <td><b></b></td>
+                        <td><b>7.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-3"/></td>
+                        <td><b></b></td>
+                        <td><b>80</b></td>
+                        <td><b></b></td>
+                        <td><b>8</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-3"/></td>
+                        <td><b></b></td>
+                        <td><b>85</b></td>
+                        <td><b></b></td>
+                        <td><b>8.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-3"/></td>
+                        <td><b></b></td>
+                        <td><b>90</b></td>
+                        <td><b></b></td>
+                        <td><b>9</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-3"/></td>
+                        <td><b></b></td>
+                        <td><b>95</b></td>
+                        <td><b></b></td>
+                        <td><b>9.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-3"/></td>
+                        <td><b></b></td>
+                        <td><b>100</b></td>
+                        <td><b></b></td>
+                        <td><b>10</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-4"/></td>
+                        <td><b></b></td>
+                        <td><b>105</b></td>
+                        <td><b></b></td>
+                        <td><b>10.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-4"/></td>
+                        <td><b></b></td>
+                        <td><b>110</b></td>
+                        <td><b></b></td>
+                        <td><b>11</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-4"/></td>
+                        <td><b></b></td>
+                        <td><b>115</b></td>
+                        <td><b></b></td>
+                        <td><b>11.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-4"/></td>
+                        <td><b></b></td>
+                        <td><b>120</b></td>
+                        <td><b></b></td>
+                        <td><b>12</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-4"/></td>
+                        <td><b></b></td>
+                        <td><b>125</b></td>
+                        <td><b></b></td>
+                        <td><b>12.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-5"/></td>
+                        <td><b></b></td>
+                        <td><b>130</b></td>
+                        <td><b></b></td>
+                        <td><b>13</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-5"/></td>
+                        <td><b></b></td>
+                        <td><b>135</b></td>
+                        <td><b></b></td>
+                        <td><b>13.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-5"/></td>
+                        <td><b></b></td>
+                        <td><b>140</b></td>
+                        <td><b></b></td>
+                        <td><b>14</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-5"/></td>
+                        <td><b></b></td>
+                        <td><b>145</b></td>
+                        <td><b></b></td>
+                        <td><b>14.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-5"/></td>
+                        <td><b></b></td>
+                        <td><b>150</b></td>
+                        <td><b></b></td>
+                        <td><b>15</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-6"/></td>
+                        <td><b></b></td>
+                        <td><b>155</b></td>
+                        <td><b></b></td>
+                        <td><b>15.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-6"/></td>
+                        <td><b></b></td>
+                        <td><b>160</b></td>
+                        <td><b></b></td>
+                        <td><b>16</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-6"/></td>
+                        <td><b></b></td>
+                        <td><b>165</b></td>
+                        <td><b></b></td>
+                        <td><b>16.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-6"/></td>
+                        <td><b></b></td>
+                        <td><b>170</b></td>
+                        <td><b></b></td>
+                        <td><b>17</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-6"/></td>
+                        <td><b></b></td>
+                        <td><b>175</b></td>
+                        <td><b></b></td>
+                        <td><b>17.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-7"/></td>
+                        <td><b></b></td>
+                        <td><b>180</b></td>
+                        <td><b></b></td>
+                        <td><b>18</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-7"/></td>
+                        <td><b></b></td>
+                        <td><b>185</b></td>
+                        <td><b></b></td>
+                        <td><b>18.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-7"/></td>
+                        <td><b></b></td>
+                        <td><b>190</b></td>
+                        <td><b></b></td>
+                        <td><b>19</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-7"/></td>
+                        <td><b></b></td>
+                        <td><b>195</b></td>
+                        <td><b></b></td>
+                        <td><b>19.5</b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="attr_Speedometer" value="-7"/></td>
+                        <td><b></b></td>
+                        <td><b>200</b></td>
+                        <td><b></b></td>
+                        <td><b>20</b></td>
+                    </tr>
+           </table>
+
+    </div>
+
+	    <div class="sheet-col">
+            <label>Vehicle Armor:</label>
+             <table>
+                <tr>
+                   <td></td>
+                   <td><b>Front AV</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><input type="number" name="attr_Front-AV" value="0"/></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Top AV</b></td>
+                   <td></td>
+                   <td><b>Windows AV</b></td>
+               </tr>
+               <tr>
+                   <td><input type="number" name="attr_Top-AV" value="0"/></td>
+                   <td></td>
+                   <td><input type="number" name="attr_Windows-AV" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>L Tire Type</b><input type="number" name="attr_F-L-Tire-Type-" value="0"/></td>
+                   <td></td>
+                   <td><b>R Tire Type</b><input type="number" name="attr_F-R-Tire-Type" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>Durability</b><input type="number" name="attr_F-L-Durability" value="0"/></td>
+                   <td></td>
+                   <td><b>Durability</b><input type="number" name="attr_F-R-Durability" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>Wheel AV</b><input type="number" name="attr_F-L-Tire-Wheel" value="0"/></td>
+                   <td></td>
+                   <td><b>Wheel AV</b><input type="number" name="attr_F-R-Tire-Wheel" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>Side AV</b></td>
+                   <td></td>
+                   <td><b>Side AV</b></td>
+               </tr>
+               <tr>
+                   <td><input type="number" name="attr_L-Side-AV" value="0"/></td>
+                   <td></td>
+                   <td><input type="number" name="attr_R-Side-AV" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>L Tire Type</b><input type="number" name="attr_B-L-Tire-Type-" value="0"/></td>
+                   <td></td>
+                   <td><b>R Tire Type</b><input type="number" name="attr_B-R-Tire-Type" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>Durability</b><input type="number" name="attr_B-L-Durability" value="0"/></td>
+                   <td></td>
+                   <td><b>Durability</b><input type="number" name="attr_B-R-Durability" value="0"/></td>
+               </tr>
+               <tr>
+                   <td><b>Wheel AV</b><input type="number" name="attr_B-L-Tire-Wheel" value="0"/></td>
+                   <td></td>
+                   <td><b>Wheel AV</b><input type="number" name="attr_B-R-Tire-Wheel" value="0"/></td>
+               </tr>
+                <tr>
+                   <td><b>Bottom AV</b></td>
+                   <td></td>
+                   <td><b>Gas Tank AV</b></td>
+               </tr>
+               <tr>
+                   <td><input type="number" name="attr_BottomAV" value="0"/></td>
+                   <td></td>
+                   <td><input type="number" name="attr_Gas-Tank-AV" value="0"/></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><b>Back AV</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><input type="number" name="attr_Back-AV" value="0"/></td>
+                   <td></td>
+               </tr>
+           </table>
+	</div>
+
+	    <div class="sheet-col">
+
+             <table>
+                <tr>
+                   <td><b>Engine</b></td>
+               </tr>
+               <tr>
+                   <td><b>Type</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Engine-Type" /></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Upgrade</b></td>
+                   <td><b>Load</b></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Engine-Upgrade-1" /></td>
+                   <td><input type="number" name="attr_Engine-Load-1" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Engine-Upgrade-2" /></td>
+                   <td><input type="number" name="attr_Engine-Load-2" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Engine-Upgrade-3" /></td>
+                   <td><input type="number" name="attr_Engine-Load-3" /></td>
+               </tr>
+               <tr>
+                   <td><b>Suspension</b></td>
+               </tr>
+               <tr>
+                   <td><b>Type</b></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Suspension-Type" /></td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td><b>Upgrade</b></td>
+                   <td><b>Load</b></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Suspension-Upgrade-1" /></td>
+                   <td><input type="number" name="attr_Suspension-Load-1" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Suspension-Upgrade-2" /></td>
+                   <td><input type="number" name="attr_Suspension-Load-2" /></td>
+               </tr>
+               <tr>
+                   <td><b>Special Equipment</b></td>
+               </tr>
+               <tr>
+                   <td><b>Upgrade</b></td>
+                   <td><b>Load</b></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-1" /></td>
+                   <td><input type="number" name="attr_Engine-Load-1" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-2" /></td>
+                   <td><input type="number" name="attr_Special-Load-2" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-3" /></td>
+                   <td><input type="number" name="attr_Engine-Load-3" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-4" /></td>
+                   <td><input type="number" name="attr_Special-Load-4" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-5" /></td>
+                   <td><input type="number" name="attr_Engine-Load-5" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-6" /></td>
+                   <td><input type="number" name="attr_Special-Load-6" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-7" /></td>
+                   <td><input type="number" name="attr_Engine-Load-7" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-8" /></td>
+                   <td><input type="number" name="attr_Special-Load-8" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-9" /></td>
+                   <td><input type="number" name="attr_Engine-Load-9" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-10" /></td>
+                   <td><input type="number" name="attr_Special-Load-10" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-11" /></td>
+                   <td><input type="number" name="attr_Engine-Load-11" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-12" /></td>
+                   <td><input type="number" name="attr_Special-Load-12" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-13" /></td>
+                   <td><input type="number" name="attr_Engine-Load-13" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-14" /></td>
+                   <td><input type="number" name="attr_Special-Load-14" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-15" /></td>
+                   <td><input type="number" name="attr_Engine-Load-15" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-16" /></td>
+                   <td><input type="number" name="attr_Special-Load-16" /></td>
+               </tr>
+               <tr>
+                   <td><input type="text" name="attr_Special-Upgrade-17" /></td>
+                   <td><input type="number" name="attr_Engine-Load-17" /></td>
+               </tr>
+           </table>
+
+        </div>
+
+    </div>
+    <div class="sheet">
+        <h3 style="margin-bottom: 10px;">Vehicle Firepower</h3>
+        <fieldset class="repeating_Shootin">
+           <table>
+               <tr>
+                    <td></td>
+                   <td><b>Weapon</b></td>
+                   <td><b>Mount</b></td>
+                   <td><b>Arc</b></td>
+                   <td><b>Shots</b></td>
+               </tr>
+               <tr>
+                   <td><button type="roll" class="sheet-" name="attr_Vehicle-Weapon-roll" value="@{Vehicle-Weapon} [[[?{Number|1}d?{type|4}!!+?{Modifier|0}]]"></button></td>
+                   <td><input type="text" name="attr_Vehicle-Weapon" /></td>
+                   <td><input type="text" name="attr_Vehicle-Weapon-Mount" /></td></td>
+                   <td><input type="text" name="attr_Vehicle-Weapon-Arc" /></td></td>
+                   <td><input type="number" name="attr_Vehicle-Weapon-Shots" value="1"/></td>
+               </tr>
+               <tr>
+                    <td></td>
+                   <td><b>Speed</b></td>
+                   <td><b>RoF</b></td>
+                   <td><b>Range</b></td>
+                   <td><b>Damage</b></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td><input type="number" name="attr_Vehicle-Weapon-Speed" value="1"/></td>
+                   <td><input type="number" name="attr_Vehicle-Weapon-RoF" value="1"/></td>
+                   <td><input type="number" name="attr_Vehicle-Weapon-Range" value="5"/></td>
+                   <td><input type="text" name="attr_Vehicle-Weapon-Damage" /></td></td>
+               </tr>
+           </table>
+
+            </select>
+        </fieldset>
+    </div>
+</div>
