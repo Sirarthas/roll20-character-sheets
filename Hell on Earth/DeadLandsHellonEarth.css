@@ -72,3 +72,72 @@ div.sheet-tab-content
 }
 
 div.sheet-tab2
+
+.sheet-rolltemplate-template table {
+   width: 189px;
+   padding: 1px;
+   border: 1px solid;
+}
+
+.sheet-rolltemplate-template th {
+   color: rgb(126, 45, 64);
+   padding-left: 5px;
+   line-height: 1.3em;
+   font-size: 1.2em;
+   text-align: left;
+font-family: "Times New Roman", Times, serif;
+   font-variant: small-caps;
+   background-color: black;
+   color:white;
+}
+
+.sheet-rolltemplate-template td {
+   padding-left: 5px;
+   background:white;
+}
+
+.sheet-rolltemplate-gun table {
+   width: 189px;
+   padding: 1px;
+   border: 1px solid;
+}
+
+.sheet-rolltemplate-gun th {
+   color: rgb(126, 45, 64);
+   padding-left: 5px;
+   line-height: 1.3em;
+   font-size: 1.2em;
+   text-align: left;
+font-family: "Times New Roman", Times, serif;
+   font-variant: small-caps;
+   background-color: red;
+   color:white;
+}
+
+.sheet-rolltemplate-gun td {
+   padding-left: 5px;
+   background:white;
+}
+
+.sheet-rolltemplate-arcane table {
+   width: 189px;
+   padding: 1px;
+   border: 1px solid;
+}
+
+.sheet-rolltemplate-arcane th {
+   color: rgb(126, 45, 64);
+   padding-left: 5px;
+   line-height: 1.3em;
+   font-size: 1.2em;
+   text-align: left;
+font-family: "Times New Roman", Times, serif;
+   font-variant: small-caps;
+   background-color: green;
+   color:white;
+}
+
+.sheet-rolltemplate-arcane td {
+   padding-left: 5px;
+   background:white;
+}
