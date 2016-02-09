@@ -141,3 +141,26 @@ font-family: "Times New Roman", Times, serif;
    padding-left: 5px;
    background:white;
 }
+
+.sheet-rolltemplate-action table {
+   width: 189px;
+   padding: 1px;
+   border: 1px solid;
+}
+
+.sheet-rolltemplate-action th {
+   color: rgb(126, 45, 64);
+   padding-left: 5px;
+   line-height: 1.3em;
+   font-size: 1.2em;
+   text-align: left;
+font-family: "Times New Roman", Times, serif;
+   font-variant: small-caps;
+   background-color: blue;
+   color:white;
+}
+
+.sheet-rolltemplate-action td {
+   padding-left: 5px;
+   background:white;
+}
