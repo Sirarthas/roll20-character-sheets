@@ -591,16 +591,22 @@
                    <td><b>Speed</b></td>
                    <td><b>RoF</b></td>
                    <td><b>Range</b></td>
+                   <td><b>AP</b></td>
+                   <td><b></b></td>
                    <td><b>Damage</b></td>
+                   <td><b></b></td>
                </tr>
                <tr>
-                   <td><button type="roll" class="sheet-" name="attr_Weaponroll" value="&{template:gun} {{character= @{character_name} }} {{name= @{Weapon} }} {{target= @{target|token_name}}} {{Check= [[?{Number|@{Damagecoord}}d?{type|@{Damagetrait}}!!+?{Modifier|0}]] }} {{hit= [[1t[Hit-location]]]}}"></button></td>
+                   <td><button type="roll" class="sheet-" name="attr_Weaponroll" value="&{template:gun} {{character= @{character_name} }} {{name= @{Weapon} }} {{target= @{target|token_name}}} {{Check= [[?{Number of Dice|@{Damagecoord}}d?{Dice type|@{Damagetrait}}!!+?{Bonus Damage|@{Damagebonus}}]] }} {{hit= [[1t[Hit-location]]]}}"></button></td>
                    <td><input type="text" name="attr_Weapon" /></td>
                    <td><input type="number" name="attr_Shots" value="1"/></td>
                    <td><input type="number" name="attr_Speed" value="1"/></td>
                    <td><input type="number" name="attr_RoF" value="1"/></td>
                    <td><input type="number" name="attr_Range" value="5"/></td>
-                   <td><input type="number" name="attr_Damagecoord" />D<input type="number" name="attr_Damagetrait" /></td>
+                   <td><input type="number" name="attr_AP" value="0"/></td>
+                   <td><input type="number" name="attr_Damagecoord" /></td>
+                   <td><i>D</i><input type="number" name="attr_Damagetrait" /></td>
+                   <td><i>+</i><input type="number" name="attr_Damagebonus" /></td>
                </tr>
            </table>
         </fieldset>
@@ -614,14 +620,20 @@
                    <td><b>Weapon</b></td>
                    <td><b>Defense</b></td>
                    <td><b>Speed</b></td>
+                   <td><b>AP</b></td>
+                   <td><b></b></td>
                    <td><b>Damage</b></td>
+                   <td><b></b></td>
                </tr>
                <tr>
-                   <td><button type="roll" class="sheet-" name="attr_Melee-Weaponroll" value="&{template:gun} {{character= @{character_name} }} {{name= @{Melee-Weapon} }} {{target= @{target|token_name}}} {{hit= [[1t[Hit-location]]]}} {{Check= [[@{Strengthcoord}d@{Strengthtrait}!!kh1+@{Strengthbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])+ (?{Number|@{Melee-Damagecoord}}d?{type|@{Melee-Damagetrait}}!!+?{Modifier|0})]] }}"></button></td>
+                   <td><button type="roll" class="sheet-" name="attr_Melee-Weaponroll" value="&{template:gun} {{character= @{character_name} }} {{name= @{Melee-Weapon} }} {{target= @{target|token_name}}} {{hit= [[1t[Hit-location]]]}} {{Check= [[@{Strengthcoord}d@{Strengthtrait}!!kh1+@{Strengthbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])+ (?{Number of Dice|@{Melee-Damagecoord}}d?{Number of Dice|@{Melee-Damagetrait}}!+?{Bonus Damage|@{Melee_Damagebonus}}]] }}] }}"></button></td>
                    <td><input type="text" name="attr_Melee-Weapon" /></td>
                    <td><input type="number" name="attr_Melee-Defense" value="1"/></td>
                    <td><input type="number" name="attr_Melee-Speed" value="1"/></td>
-                   <td><input type="number" name="attr_Melee-Damagecoord" />D<input type="number" name="attr_Melee-Damagetrait" /></td>
+                   <td><input type="number" name="attr_Melee_AP" value="0"/></td>
+                   <td><input type="number" name="attr_Melee-Damagecoord" /></td>
+                   <td><i>D</i><input type="number" name="attr_Melee-Damagetrait" /></td>
+                   <td><i>+</i><input type="number" name="attr_Melee_Damagebonus" /></td>
                </tr>
            </table>
         </fieldset>
