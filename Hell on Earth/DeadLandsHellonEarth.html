@@ -626,7 +626,7 @@
                    <td><b></b></td>
                </tr>
                <tr>
-                   <td><button type="roll" class="sheet-" name="attr_Melee-Weaponroll" value="&{template:gun} {{character= @{character_name} }} {{name= @{Melee-Weapon} }} {{target= @{target|token_name}}} {{hit= [[1t[Hit-location]]]}} {{Check= [[@{Strengthcoord}d@{Strengthtrait}!!kh1+@{Strengthbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])+ (?{Number of Dice|@{Melee-Damagecoord}}d?{Number of Dice|@{Melee-Damagetrait}}!+?{Bonus Damage|@{Melee_Damagebonus}}]] }}] }}"></button></td>
+                   <td><button type="roll" class="sheet-" name="attr_Melee-Weaponroll" value="&{template:gun} {{character= @{character_name} }} {{name= @{Melee-Weapon} }} {{target= @{target|token_name}}} {{hit= [[1t[Hit-location]]]}} {{Check= [[@{Strengthcoord}d@{Strengthtrait}!!kh1+@{Strengthbonus}+([[{@{Head_wound_penalty},@{Left-Arm-wound_penalty},@{Right-Arm-wound_penalty},@{Guts_wound_penalty},@{Left-Leg-wound_penalty},@{Right-Leg-wound_penalty}}KL1]])+ (?{Number of Dice|@{Melee-Damagecoord}}d?{Dice type|@{Melee-Damagetrait}}!!)+?{Bonus Damage|@{Melee_Damagebonus}} ]]  }}"></button></td>
                    <td><input type="text" name="attr_Melee-Weapon" /></td>
                    <td><input type="number" name="attr_Melee-Defense" value="1"/></td>
                    <td><input type="number" name="attr_Melee-Speed" value="1"/></td>
@@ -1929,7 +1929,10 @@
 <rolltemplate class="sheet-rolltemplate-action">
        <table class="sheet-rolltemplate-action">
            <tr>
-           		<th colspan="3">{{name}} {{Cards}}</th>
+           		<th colspan="3">{{name}} </th>
        	</tr>
+           <tr>
+                   <td><i><b>{{Cards}}</b></i></td>
+            </tr>
     </table>
 </rolltemplate>
